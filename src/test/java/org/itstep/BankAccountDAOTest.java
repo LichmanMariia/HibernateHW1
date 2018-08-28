@@ -20,7 +20,6 @@ public class BankAccountDAOTest {
 		bankAccountDAO.saveBankAccount(bankAccount);
 	}
 
-	@Ignore
 	@Test
 	public void testSaveBankAccount() {
 		BankAccountDAO bankAccountDAO = new BankAccountDAO();
@@ -35,7 +34,7 @@ public class BankAccountDAOTest {
 		assertEquals(Integer.valueOf("500.0"), result.getAmountOfCredit());
 		
 	}
-	@Ignore
+	
 	@Test
 	public void testUpdateBankAccount() {
 		BankAccount bankAccount1 = new BankAccount("Alex", "Petrov", "(066)333-99-11", "petrov@gmail.com", 1600.0, 400.0, 700.0);
@@ -51,7 +50,7 @@ public class BankAccountDAOTest {
 		assertEquals(Integer.valueOf("700.0"), result.getAmountOfCredit());
 				
 	}
-	@Ignore
+	
 	@Test
 	public void testGetBankAccount() {
 		BankAccountDAO bankAccountDAO = new BankAccountDAO();
@@ -66,14 +65,15 @@ public class BankAccountDAOTest {
 		assertEquals(Integer.valueOf("500.0"), result.getAmountOfCredit());
 				
 	}
-@Test
+	
+	@Test
 	public void testDeleteBankAccount() {
 	BankAccountDAO bankAccountDAO = new BankAccountDAO();
 	bankAccountDAO.deleteBankAccount(bankAccount);
 	BankAccount result = bankAccountDAO.getBankAccount(bankAccount.getId());
 	assertNull(result);
 	}
-	@Ignore
+	
 	@Test
 	public void testGetBankAccountByFirstNameAndSecondName() {
 		BankAccountDAO bankAccountDAO = new BankAccountDAO();
@@ -81,7 +81,7 @@ public class BankAccountDAOTest {
 		assertEquals("Alex", result.getFirstName());
 		assertEquals("Pupkin", result.getSecondName());
 			}
-	@Ignore
+	
 	@Test
 	public void testGetBankAccountByTelephone() {
 		BankAccountDAO bankAccountDAO = new BankAccountDAO();
@@ -90,7 +90,7 @@ public class BankAccountDAOTest {
 		assertEquals("(099)999-99-99", bankAccountArray.getTelephone());
 		}
 	}
-	@Ignore
+	
 	@Test
 	public void testGetStudentToSecondName() {
 		BankAccountDAO bankAccountDAO = new BankAccountDAO();
