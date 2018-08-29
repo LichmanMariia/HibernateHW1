@@ -29,9 +29,9 @@ public class BankAccountDAOTest {
 		assertEquals("Pupkin", result.getSecondName());
 		assertEquals("(099)999-99-99", result.getTelephone());
 		assertEquals("pupkin@ukr.net", result.getEmail());
-		assertEquals(Integer.valueOf("1000.0"), result.getCarrency());
-		assertEquals(Integer.valueOf("500.0"), result.getAmount());
-		assertEquals(Integer.valueOf("500.0"), result.getAmountOfCredit());
+		assertEquals(Double.valueOf(1000.0), result.getCarrency());
+		assertEquals(Double.valueOf(500.0), result.getAmount());
+		assertEquals(Double.valueOf(500.0), result.getAmountOfCredit());
 		
 	}
 	
@@ -45,9 +45,12 @@ public class BankAccountDAOTest {
 		assertEquals("Petrov", result.getSecondName());
 		assertEquals("(066)333-99-11", result.getTelephone());
 		assertEquals("petrov@gmail.com", result.getEmail());
-		assertEquals(Integer.valueOf("1600.0"), result.getCarrency());
-		assertEquals(Integer.valueOf("400.0"), result.getAmount());
-		assertEquals(Integer.valueOf("700.0"), result.getAmountOfCredit());
+		
+		assertEquals(Double.valueOf(1600), result.getCarrency());
+		assertEquals(Double.valueOf(400), result.getAmount());
+		assertEquals(Double.valueOf(700), result.getAmountOfCredit());
+		
+		
 				
 	}
 	
@@ -60,9 +63,9 @@ public class BankAccountDAOTest {
 		assertEquals("Pupkin", result.getSecondName());
 		assertEquals("(099)999-99-99", result.getTelephone());
 		assertEquals("pupkin@ukr.net", result.getEmail());
-		assertEquals(Integer.valueOf("1000.0"), result.getCarrency());
-		assertEquals(Integer.valueOf("500.0"), result.getAmount());
-		assertEquals(Integer.valueOf("500.0"), result.getAmountOfCredit());
+		assertEquals(Double.valueOf(1000.0), result.getCarrency());
+		assertEquals(Double.valueOf(500.0), result.getAmount());
+		assertEquals(Double.valueOf(500.0), result.getAmountOfCredit());
 				
 	}
 	
@@ -74,6 +77,7 @@ public class BankAccountDAOTest {
 	assertNull(result);
 	}
 	
+	
 	@Test
 	public void testGetBankAccountByFirstNameAndSecondName() {
 		BankAccountDAO bankAccountDAO = new BankAccountDAO();
@@ -81,7 +85,7 @@ public class BankAccountDAOTest {
 		assertEquals("Alex", result.getFirstName());
 		assertEquals("Pupkin", result.getSecondName());
 			}
-	
+
 	@Test
 	public void testGetBankAccountByTelephone() {
 		BankAccountDAO bankAccountDAO = new BankAccountDAO();
